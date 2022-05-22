@@ -2,7 +2,7 @@ import type { RouteDataFunc } from 'solid-app-router';
 import { createResource } from 'solid-js';
 
 function wait<T>(ms: number, data: T): Promise<T> {
-  return new Promise((resolve) => setTimeout(resolve, ms, data));
+  return new Promise(resolve => setTimeout(resolve, ms, data));
 }
 
 function random(min: number, max: number): number {

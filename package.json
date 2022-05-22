@@ -5,14 +5,31 @@
   "description": "",
   "scripts": {
     "dev": "vite",
+    "lint": "eslint --ext .js,.ts,.tsx --ignore-path .gitignore --quiet",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "postinstall": "node ./fix-jest-dom.mjs"
   },
   "license": "MIT",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-solid": "^0.4.7",
+    "jsdom": "^19.0.0",
+    "prettier": "^2.6.2",
+    "solid-testing-library": "^0.3.0",
+    "typescript": "^4.6.4",
     "vite": "^2.9.9",
+    "vite-plugin-eslint": "^1.6.1",
     "vite-plugin-solid": "^2.2.6",
-    "vite-plugin-windicss": "^1.8.4"
+    "vite-plugin-windicss": "^1.8.4",
+    "vitest": "^0.12.9"
   },
   "dependencies": {
     "solid-app-router": "^0.3.3",

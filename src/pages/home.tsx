@@ -9,19 +9,13 @@ export default function Home() {
       <p class="mt-4">This is the home page.</p>
 
       <div class="flex items-center space-x-2">
-        <button
-          class="border rounded-lg px-2 border-gray-900"
-          onClick={() => setCount(count() - 1)}
-        >
+        <button class="border rounded-lg px-2 border-gray-900" onClick={() => setCount(count() - 1)}>
           -
         </button>
 
-        <output class="p-10px">Count: {count}</output>
+        <output class="p-10px">Count: {count()}</output>
 
-        <button
-          class="border rounded-lg px-2 border-gray-900"
-          onClick={() => setCount(count() + 1)}
-        >
+        <button class="border rounded-lg px-2 border-gray-900" onClick={() => setCount(count() + 1)}>
           +
         </button>
       </div>
